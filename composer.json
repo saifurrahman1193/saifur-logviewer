@@ -1,10 +1,27 @@
 {
     "name": "saifur/logviewer",
     "description": "This a package all about log viewer",
+    "authors": [
+        {
+            "name": "Mohamed Saifur Rahman",
+            "email": "saifur.rahman1193@gmail.com",
+            "homepage": "https://saifurrahman.my.canva.site/",
+            "role": "Developer"
+        }
+    ],
+    "license": "MIT",
+    "keywords": [
+        "logviewer",
+        "laravel"
+    ],
     "autoload": {
         "psr-4": {
             "Saifur\\LogViewer\\": "src/"
         }
     },
-    "require": {}
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.4|^8.0"
+    }
+
 }
