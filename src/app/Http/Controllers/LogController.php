@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Saifur\LogViewer\app\Facades\Helpers\SLVCommonFacade;
 
 class LogController extends Controller
 {
@@ -149,8 +150,8 @@ class LogController extends Controller
     //     $data = [
     //         'info' => [
     //             'datetime' => $data_f[0]['datetime'],
-    //             'date' => getFormattedDate($data_f[0]['datetime']),
-    //             'day' => getYMDToDMcYDay($data_f[0]['datetime'])
+    //             'date' => SLVCommonFacade::getFormattedDate($data_f[0]['datetime']),
+    //             'day' => SLVCommonFacade::getYMDToDMcYDay($data_f[0]['datetime'])
     //         ],
     //         'data' => $data_f,
     //     ];
@@ -182,7 +183,7 @@ class LogController extends Controller
                 $log = substr($log_full, 22);
 
                 $environment = explode('.', $log)[0];
-                $level = explode('.',explode(':', $log)[0])[1];
+                $level = explode('.',explode(':', $log)[0])[1] ?? '';
 
                 $log = trim(str_replace($environment.'.'.$level.':', '', $log));
 
@@ -206,8 +207,8 @@ class LogController extends Controller
         $data = [
             'info' => [
                 'datetime' => $data_f[0]['datetime'] ?? '',
-                'date' => isset($data_f[0]['datetime']) ? getFormattedDate($data_f[0]['datetime']) : '',
-                'day' => isset($data_f[0]['datetime']) ? getYMDToDMcYDay($data_f[0]['datetime']) : ''
+                'date' => isset($data_f[0]['datetime']) ? SLVCommonFacade::getFormattedDate($data_f[0]['datetime']) : '',
+                'day' => isset($data_f[0]['datetime']) ? SLVCommonFacade::getYMDToDMcYDay($data_f[0]['datetime']) : ''
             ],
             'data' => $data_f,
         ];

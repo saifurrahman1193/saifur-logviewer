@@ -3,12 +3,15 @@
 namespace Saifur\LogViewer;
 
 use Illuminate\Support\ServiceProvider;
+use Saifur\LogViewer\app\Facades\Helpers\SLVCommonHelper;
 use Saifur\LogViewer\app\Http\Middleware\SaifurLogViewerMiddleware;
 
 class SaifurLogViewerServiceProvider extends ServiceProvider
 {
     public function register()
     {
+        // Facades Registration
+        $this->app->bind('slvcommonhelper', function () {  return new SLVCommonHelper();   });
     }
 
     public function boot()
@@ -22,6 +25,7 @@ class SaifurLogViewerServiceProvider extends ServiceProvider
         // middlewares
         $this->app['router']->aliasMiddleware('SaifurLogViewerMiddleware', SaifurLogViewerMiddleware::class);
 
+        require_once __DIR__.'/app/Libraries/Helpers.php';
     }
 
 

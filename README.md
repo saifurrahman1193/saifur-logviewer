@@ -5,7 +5,8 @@ A dynamic log viewer
 - [Saifur-LogViewer](#saifur-logviewer)
   - [Contents](#contents)
   - [Documentation, Installation, and Usage Instructions](#documentation-installation-and-usage-instructions)
-    - [Commands](#commands)
+    - [Laravel Commands](#laravel-commands)
+    - [DB Change](#db-change)
   - [Contributor](#contributor)
   - [Alternatives](#alternatives)
   - [License](#license)
@@ -16,12 +17,19 @@ This package allows you to manage your logs.
 Once installed you can do stuff like this:
 
 
-### Commands
+### Laravel Commands
 
 ```
 composer dump-autoload
 php artisan vendor:publish --tag=public --force
 ```
+
+### DB Change
+```
+ALTER TABLE  `users` ADD COLUMN `logviewer` TINYINT(4) NULL DEFAULT 0 ;
+```
+**Note:** update in table **users** set column **logviewer=1**
+
 
 ## Contributor
 

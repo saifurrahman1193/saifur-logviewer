@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Saifur\\Dbhelper\\' => array($baseDir . '/src'),
+    'Saifur\\LogViewer\\' => array($baseDir . '/src'),
 );

@@ -12,6 +12,9 @@
     "license": "MIT",
     "keywords": [
         "logviewer",
+        "dynamic-logviewer",
+        "single-page-dynamic-logviewer",
+        "user-friendly-logviewer",
         "laravel"
     ],
     "autoload": {
@@ -21,7 +24,7 @@
     },
     "minimum-stability": "dev",
     "require": {
-        "php": "^7.4|^8.0"
+        "php": "^7.3.11|^8.0"
     }
 
 }
