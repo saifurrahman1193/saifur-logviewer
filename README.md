@@ -20,6 +20,7 @@ Once installed you can do stuff like this:
 ### Laravel Commands
 
 ```
+composer require saifur/logviewer
 composer dump-autoload
 php artisan vendor:publish --tag=public --force
 ```
