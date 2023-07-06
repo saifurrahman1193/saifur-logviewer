@@ -1,6 +1,10 @@
 # Saifur-LogViewer
 A dynamic log viewer
 
+<a href="https://packagist.org/packages/saifur/logviewer"><img src="https://img.shields.io/packagist/dt/saifur/logviewer" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/saifur/logviewer"><img src="https://img.shields.io/packagist/v/saifur/logviewer" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/saifur/logviewer"><img src="https://img.shields.io/packagist/l/saifur/logviewer" alt="License"></a>
+
 ## Contents
 - [Saifur-LogViewer](#saifur-logviewer)
   - [Contents](#contents)
