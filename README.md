@@ -45,4 +45,4 @@ ALTER TABLE  `users` ADD COLUMN `logviewer` TINYINT(4) NULL DEFAULT 0 ;
 - [ARCANEDEV/LogViewer](https://github.com/ARCANEDEV/LogViewer) 
 
 ## License
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+<!-- The MIT License (MIT). Please see [License File](LICENSE.md) for more information. -->
